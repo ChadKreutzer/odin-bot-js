@@ -1,30 +1,18 @@
 {
-  "name": "giphy-gitter",
+  "name": "odin-bot",
   "version": "0.0.1",
-  "description": "get the perfect gif in your gitter activity feed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dervondenbergen/giphy-gitter.git"
-  },
-  "keywords": [
-    "giphy",
-    "gifs",
-    "gitter"
-  ],
-  "author": "Felix De Montis",
+  "author": "Cody Loyd",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dervondenbergen/giphy-gitter/issues"
-  },
-  "homepage": "https://github.com/dervondenbergen/giphy-gitter",
   "dependencies": {
+    "apiai": "3.0.3",
+    "dotenv": "^5.0.0",
     "giphy": "0.0.4",
     "node-gitter": "^1.2.8",
-    "request": "^2.57.0"
+    "request": "^2.57.0",
+    "winston": "^2.3.1"
   }
 }

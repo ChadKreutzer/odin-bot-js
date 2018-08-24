@@ -1,55 +1,46 @@
-'use strict';
+'use strict'
+require('dotenv').config()
 
 var config = {
   // gitter settings for retrieving and sending messages
   gitter: {
     // gitter token, can be retrieved from https://developer.gitter.im/apps
     token: process.env.GITTER_TOKEN,
-
-    // room: {
-    //   // name of the gitter room, you want to retrieve and send the messages
-    //   name: 'TheOdinProject/bot-spam-playground'
-    // },
-
+    //array of rooms that the bot should be active in
     rooms: [
-      'bot-spam-playground',
-      'Code-Review',
-      'Computer-Science',
-      'Contributing',
-      'Getting-Hired',
-      'Git',
-      'HTML-CSS',
-      'Interesting-Stuff',
-      'Javascript',
-      'ModTeam',
-      'Rails',
-      'Random',
-      'Ruby',
-      'theodinproject',
-      'LookingForPairs',
-      // 'secretbotroom'
+      'TheOdinProject/theodinproject',
+      'TheOdinProject/Front-End',
+      'TheOdinProject/Back-End',
+      'TheOdinProject/Contributing',
+      'TheOdinProject/Getting-Hired',
+      'TheOdinProject/ModTeam',
+      'TheOdinProject/Random',
+      'TheOdinProject/VIM',
+      'TheOdinProject/Javascript',
+      'TheOdinProject/bot-spam-playground',
+      'TheOdinProject/tech_support',
+      'codyloyd',
+      // 'TheOdinProject/secretbotroom'
     ],
-
-    // custom webhook to send the gifs to the activity feed
-    // @codyloyd: The following is unnecessary as we are not sending
-    // gifs to the activity feed.
-    webhook: 'https://webhooks.gitter.im/e/ca75b94537a0fb91d19f',
-
     place: 'chat'
   },
 
   giphy: {
-   // giphy api key
-   apikey: process.env.GIPHY_API_KEY,
-
-   // regex to match the giphy command (could be anything)
-   regex: /^\/giphy/
+    // giphy api key
+    apikey: process.env.GIPHY_API_KEY,
+    // regex to match the giphy command (could be anything)
+    regex: /^\/giphy/
   },
 
   pointsbot: {
     token: process.env.POINTSBOT_TOKEN,
-    regex: /@[A-Za-z0-9_-]\s?\+\+/
+  },
+  apiai: {
+    apikey: process.env.APIAI_TOKEN
+  },
+  weatherAPI: {
+    weatherApiKey: process.env.WEATHER_API_KEY
   }
 }
 
-module.exports = config;
+module.exports = config
